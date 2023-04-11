@@ -1,0 +1,44 @@
+
+
+
+.head{
+	display: flex;
+	justify-content: space-between;
+}
+
+
+.sliderControllers{
+	margin-top: 1em;
+}
+
+
+.arrows{
+	color: $decorColor_1;
+	border:0.1em solid;
+}
+
+.sliderArrow{
+	background: transparent;
+	border: none;
+	outline: none;
+	color: currentColor;
+	cursor: pointer;
+	transition: 0.3s;
+	font-size: 1.2em;
+	aspect-ratio: 2/1;
+	width: 1.8em;
+	user-select: none;
+
+	&:hover{
+		background: #B4ECCC;
+	}
+
+	&[data-arrow='prev']{
+		transform: scaleX(-1);
+	}
+
+	&:disabled{
+		opacity: 0.2;
+		pointer-events: none;
+	}
+}

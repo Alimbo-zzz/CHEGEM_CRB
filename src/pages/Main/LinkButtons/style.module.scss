@@ -1,0 +1,50 @@
+.wrap{
+	padding: 4em 0;
+}
+
+
+
+.container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 2em;
+}
+
+
+
+.btn{
+	flex: 1;
+	aspect-ratio: 1/0.8;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: $bgColor_1;
+	gap: 1em;
+	box-shadow: 0.2em 0.4em 1em rgba(34,34,34,0.5);
+	transition: 0.2s;
+
+	&:hover{
+		transform: scale(1.1);
+	}
+	
+
+
+	&__icon{
+		width: 6em;
+		aspect-ratio: 1/1;
+		border-radius: 50%;
+		border:0.2em solid currentColor;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+
+	&__text{
+		font-size: 1.8em;
+	}
+
+
+}

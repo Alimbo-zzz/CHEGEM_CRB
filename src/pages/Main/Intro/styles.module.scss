@@ -1,0 +1,31 @@
+.wrap{
+	height: 500px;
+	padding-top: 5em;
+}
+
+
+.container{
+	position: relative;
+}
+
+
+.content{
+	display: flex;
+	flex-direction: column;
+	gap: 4em;
+	max-width: 750px;
+	align-items: flex-start;
+}
+
+
+
+
+.img{
+	position: absolute;
+	right: 0; top: 0;
+	width: 40em;
+	z-index: -1;
+	user-select: none;
+	pointer-events: none;
+	transform: translate(10%, -25%);
+}

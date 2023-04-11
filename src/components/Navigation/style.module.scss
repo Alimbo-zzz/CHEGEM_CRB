@@ -1,0 +1,51 @@
+
+
+.nav{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.5em;
+}
+
+
+.link{
+	padding: 0.3em 0.8em;
+	position: relative;
+	transition: 0.3s;
+	color: $textColor_1;
+	white-space: nowrap;
+
+	&[data-active='true']{		
+		color: $decorColor_1;
+		&::before{opacity: 1;}
+	}
+
+
+	&:hover{
+		color: $decorColor_1;
+		&::before{opacity: 1;}
+	}
+
+	&::before{
+		content: '';
+		position: absolute;
+		left: 50%;bottom: 0;
+		width: calc(100% - 1.6em);
+		height: 0.1em;
+		background: currentColor;
+		transform: translateX(-50%);
+		transition: inherit;
+
+		opacity: 0;
+	}
+}
+
+
+// parents
+
+.nav[data-parent='footer']{
+	.link{
+		color: $bgColor_1;
+	}
+
+}

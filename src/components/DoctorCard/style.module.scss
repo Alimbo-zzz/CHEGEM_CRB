@@ -1,0 +1,38 @@
+.wrap{
+	box-shadow: 0.2em 0.2em 0.8em 0.2em rgba(0,0,0,0.1);
+	margin: 1em;
+	padding: 2em 1em;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	align-items: center;
+	text-align: center;
+}
+
+
+.avatar{
+	width: 10em;
+	aspect-ratio: 1/1;
+	border-radius: 50%;
+	border: 0.15em solid $decorColor_1;
+	background: $bgColor_1;
+	user-select: none;
+	pointer-events: none;
+}
+
+
+.name{
+	font-weight: bold;
+	color: $textColor_1;
+	font-size: 1.4em;
+}
+
+.description{
+	color: $textColor_2;
+	font-size: 0.85em;
+}
+
+.direction{
+	color: $decorColor_1;
+	font-size: 1em;
+}
