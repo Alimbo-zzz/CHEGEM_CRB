@@ -10,7 +10,7 @@ const Header = (events) => {
 		<header className={scss.wrap}>
 			<div className={`container ${scss.container}`}>
 				<div className={scss.logo}> <img src={logo}/> </div>
-				<div className={scss.nav}><Navigation/></div>
+				<div className={scss.nav}><Navigation name='header'/></div>
 			</div>
 		</header>
 	</>);

@@ -1,6 +1,10 @@
 .wrap{
 	height: 500px;
 	padding-top: 5em;
+
+	@media (max-width: $laptop) {
+		height: 320px;
+	}
 }
 
 
@@ -15,6 +19,15 @@
 	gap: 4em;
 	max-width: 750px;
 	align-items: flex-start;
+
+	@media (max-width: $laptop) {
+		max-width: 500px;
+	}
+	
+	@media (max-width: $tablet) {
+		text-align: center;
+		align-items: center;
+	}
 }
 
 
@@ -28,4 +41,16 @@
 	user-select: none;
 	pointer-events: none;
 	transform: translate(10%, -25%);
+
+
+	@media (max-width: $laptop) {
+		width: 30em;
+	}
+
+	@media (max-width: $tablet) {
+		right: 50%;
+		transform: translate(50%, -28%);
+		opacity: 0.4;
+		width: 120%;
+	}
 }

@@ -7,4 +7,10 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	flex-wrap: wrap;
+	gap: 2em;
+
+	@media (max-width: $phone) {
+		justify-content: space-around;
+	}
 }

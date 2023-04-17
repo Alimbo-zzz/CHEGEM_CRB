@@ -1,5 +1,12 @@
 h1{
 	font-size: 50px;
+
+	@media (max-width: $laptop) {
+		font-size: 35px;
+	}
+	@media (max-width: $phone) {
+		font-size: 30px;
+	}
 }
 
 h2{

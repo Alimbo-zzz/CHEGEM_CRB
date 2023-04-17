@@ -5,6 +5,18 @@
 	align-items: center;
 	justify-content: space-between;
 	gap: 0.5em;
+
+	&[data-parent="header"]{
+		@media (max-width: $tablet) {
+			display: none;
+		}
+	}
+
+	&[data-parent="footer"]{
+		flex-wrap: wrap;
+	}
+
+
 }
 
 

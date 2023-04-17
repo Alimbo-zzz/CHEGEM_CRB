@@ -107,9 +107,27 @@ const BestDoctors = (events) => {
 					onSlideChange={e => setActiveIndex(e.activeIndex)}
 					spaceBetween={15}
 					slidesPerView={4}
+					breakpoints={{
+						0:{
+							slidesPerView: 1,
+							spaceBetween: 15
+						},
+						768:{
+							slidesPerView: 2,
+							spaceBetween: 0
+						},
+						1024:{
+							slidesPerView: 3,
+							spaceBetween: 15
+						},
+						1280:{
+							slidesPerView: 4,
+							spaceBetween: 15
+						}
+					}}
 				>
 					{slides.map((slide, i) => (
-						<SwiperSlide key={i}>	 <DoctorCard data={slide}/> </SwiperSlide>
+						<SwiperSlide key={i} className={scss.slider__slide}>	 <DoctorCard data={slide}/> </SwiperSlide>
 					))}
 				</Swiper>
 			</div>

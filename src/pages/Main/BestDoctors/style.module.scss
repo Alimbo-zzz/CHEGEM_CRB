@@ -42,3 +42,15 @@
 		pointer-events: none;
 	}
 }
+
+
+
+.slider{
+
+
+	&__slide{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}

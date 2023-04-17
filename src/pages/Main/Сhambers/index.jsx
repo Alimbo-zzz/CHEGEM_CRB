@@ -73,9 +73,14 @@ const Chambers = (events) => {
 						modules={[FreeMode, Navigation, Thumbs]}
 						spaceBetween={15}
 						direction='vertical'
+						breakpoints={{
+							0:{	spaceBetween: 0,},
+							480:{	spaceBetween: 5,},
+							768:{	spaceBetween: 15,},
+						}}
 					>
 						{slides.map((slide, i) => (
-							<SwiperSlide key={i}>	<img src={slide.img} /> </SwiperSlide>
+							<SwiperSlide className={scss.sliderPagination__slide} key={i}>	<img src={slide.img} /> </SwiperSlide>
 						))}
 					</Swiper>
 					
