@@ -8,14 +8,16 @@ body{
 }
 
 
+
 main{
 	flex: 1 0 0;
+	position: relative;
 }
 
 #root{
 	display: flex;
 	flex-direction: column;
-	padding-top: 6em;
+	// padding-top: 6em;
 }
 
 

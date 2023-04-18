@@ -6,12 +6,13 @@
 
 .list{
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 2em;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(3, 220px);
+	gap: 1em;
 
 	@media (max-width: $tablet) {
-		display: flex;
-		flex-direction: column;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(4, 200px);
 	}
 }
 
@@ -19,30 +20,126 @@
 
 
 .item{
-	background: $bgColor_1;
+	background: $gradient_1;
 	box-shadow: 0.2em 0.4em 1em rgba(34,34,34,0.2);
-	padding: 3em 1em;
 	display: flex;
 	flex-direction: column;
-	gap: 1.5em;
+	color: $bgColor_1;
+	cursor: pointer;
+	transition: 0.3s;
+	order: 5;
+	
+
+	&:hover{
+		transform: scale(1.05);
+	}
+
+
 
 	&__img{
 		width: 100%;
-		aspect-ratio: 2/1;
+		aspect-ratio: 2.5/1;
 		object-fit: cover;
+
+		@media (max-width: $laptop) {
+			aspect-ratio: 1.8/1;
+		}
+	}
+
+	&__info{
+		padding: 1em;
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+		flex: 1;
+		overflow: hidden;
 	}
 
 
 	&__title{
-		color: $decorColor_1;
-		margin: 0 auto;
+		color: $bgColor_1;
 		font-weight: bold;
-		font-size: 1.6em;
+		font-size: 1em;
+		text-align: center;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 	&__text{
-
+		color: $bgColor_1;
+		opacity: 0.8;
+		flex: 1;
+		overflow: auto;
+		font-size: 0.85em;
+		display: none;
+		text-overflow: ellipsis;
+		@media (max-width: $tablet) {
+			overflow: hidden;
+		}
 	}
 
 
+}
+
+
+
+
+
+.item:nth-child(1){
+	grid-column: span 2;
+	grid-row: span 2;
+	order: 1;
+
+	.item__title{
+		font-size: 1.4em;
+		text-align: left;
+		height: auto;
+	}
+
+	.item__img{
+		width: auto;
+		aspect-ratio: 3/1;
+
+		@media (max-width: $laptop) {
+			aspect-ratio: 2/1;
+		}
+	}
+
+	.item__text{
+		display: block;
+	}
+
+	&:hover{transform: scale(1.02);}
+}
+
+.item:nth-child(6), .item:nth-child(7){
+	grid-column: span 2;
+	flex-direction: row;
+
+	@media (max-width: $laptop) {
+		order: 2;
+	}
+
+
+	.item__img{
+		width: auto;
+		aspect-ratio: 1/1;
+
+		@media (max-width: $laptop) { aspect-ratio: 1.5/2;}
+		@media (max-width: $laptop) { aspect-ratio: 1.2/2;}
+		
+	}
+
+	
+	.item__title{
+		text-align: left;
+		height: auto;
+	}
+	.item__text{
+		display: block;
+	}
+	
+	&:hover{transform: scale(1.02);}
 }

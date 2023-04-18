@@ -5,6 +5,7 @@ import LineQuestion from "./LineQuestion";
 import LinkButtons from "./LinkButtons";
 import News from "./News";
 import Chambers from "./Сhambers";
+import InfoList from "./InfoList";
 
 
 
@@ -16,4 +17,5 @@ export {
 	LineQuestion,
 	BestDoctors,
 	Honors,
+	InfoList,
 }

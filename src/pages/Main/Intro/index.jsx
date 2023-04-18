@@ -1,7 +1,7 @@
 import React from 'react';
 import scss from './styles.module.scss';
 
-import main_img from '@images/Main_img.png';
+import main_img from '@images/main-bg-img.png';
 
 
 const Intro = (events) => {
@@ -14,8 +14,8 @@ const Intro = (events) => {
 					<h1 className='title'>Центральная районная больница им. Хацукова А.А.</h1>
 					<a href='#' className='btn'>Онлайн запись</a>
 				</div>
-				<img src={main_img} className={scss.img}/>
 			</div>
+			<img src={main_img} className={scss.img}/>
 		</section>
 	</>);
 }

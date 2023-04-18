@@ -1,0 +1,27 @@
+.wrap{
+	color: $bgColor_1;
+	background: $gradient_1;
+	padding: 3em 0;
+
+	[data-name='grid']{
+		display: flex;
+		flex-direction: column;
+		gap:2em;
+	}
+
+	@media (max-width: $phone) {
+		text-align: center;
+	}
+
+}
+
+.infoBox{
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+
+.title{
+	line-height: 1.2em;
+}
